@@ -1,10 +1,8 @@
 # OS APP
 
-Aplicação para geração e contro de Ordens de Serviço
+Aplicação para geração e controle de Ordens de Serviço
 
-Projeto desenvolvido durante as aulas.  
-Desenvolvimento Web Front End  
-
+Projeto desenvolvido durante as aulas de **Desenvolvimento Web Front End**  
 [UniAcademia - Engenharia de Software](https://www.uniacademia.edu.br/curso/engenharia-de-software)
 
 1. [Aula] Inicio do projeto - 23/05
