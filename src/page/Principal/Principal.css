@@ -1,0 +1,21 @@
+#principal {
+    background-color: var(--cor-board);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8rem 1fr 7rem;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    max-width: 600px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.naoExiste {
+    margin: 2rem;
+    color: rgb(180, 180, 180);
+}

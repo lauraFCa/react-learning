@@ -1,0 +1,34 @@
+.cabecalho {
+    grid-area: header;
+    max-width: 600px;
+    background-color: var(--cor-header);
+}
+
+#logo {
+    background-color: #fff;
+    width: 50px;
+    margin-left: 15px;
+}
+
+.cabecalho img {
+    flex-shrink: 1;
+    padding: 1rem;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho h1:nth-child(2) {
+    flex-grow: 1;
+    padding-left: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.cabecalho .quest {
+    padding: 1.5rem;
+}

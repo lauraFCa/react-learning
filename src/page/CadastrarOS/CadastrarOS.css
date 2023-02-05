@@ -1,0 +1,16 @@
+#ordem {
+    display: flex;
+    padding: 0 2rem;
+    align-items: left;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: linear-gradient(rgba(255, 119, 232, 0.5), rgba(0, 37, 158, 0.5)), url("../../img/background.jpg");
+}
+
+#ordem .actions {
+    margin-top: 1rem;
+}
+
+#ordem .data {
+    display: none;
+}

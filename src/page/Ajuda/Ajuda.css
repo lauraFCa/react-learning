@@ -1,0 +1,28 @@
+#ajuda {
+    padding: 2rem;
+    background-image: linear-gradient(rgba(255, 119, 232, 0.5), rgba(0, 37, 158, 0.3));
+}
+
+#ajuda .contatos {
+    margin: 1rem 2rem 1rem 2rem;
+}
+
+#ajuda p svg {
+    margin-right: 1rem;
+}
+
+#ajuda .rotas h3{
+    margin: 3rem 0 .5rem 0;
+}
+#ajuda .rotas li{
+    line-height: 3rem;
+    font-style: italic;
+}
+
+#ajuda .rotas ul {
+    list-style-type: none;
+}
+
+#ajuda .rotas li span {
+    font-style: normal;
+}
