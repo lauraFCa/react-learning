@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script> <!-- React import -->
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- React to page import -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>React *</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        let ul = React.createElement("ul", { style: { color: "blue" } },
+            React.createElement("li", null, "Monday"),
+            React.createElement("li", null, "Tuesday"),
+            React.createElement("li", null, "Wednesday"),
+            React.createElement("li", null, "Thursday"),
+            React.createElement("li", null, "Friday"),
+        );
+
+        let think = "";
+        let snake = "";
+        let melt = "";
+        let name = "REACT";
+
+        function Header(props) {
+            console.log(props)
+            return (
+                <header>
+                    <h1>{props.name}'s Kitchen</h1>
+                </header>
+            )
+        }
+
+        function Main(props) {
+            return (
+                <section>
+                    <p>We serve the most {props.adjective} food around</p>
+                    <img 
+                        width="50%" 
+                        src="https://storage.kempinski.com/cdn-cgi/image/w=1920,f=auto,g=auto,fit=scale-down/ki-cms-prod/images/1/9/8/6/86891-1-eng-GB/5b43edfee48c-73660559_4K.jpg" 
+                        alt="Underwater Restaurant image"
+                    />
+                    <ul>
+                        {props.dishes.map((dish) => (
+                            <li key={dish.id}>{dish.title.toUpperCase()}</li>
+                        ))}
+                    </ul>
+                </section>
+            )
+        }
+
+        function Footer(props){
+            return(
+                <footer id="footer">
+                    <hr />
+                    <ol>
+                        {props.emojis.map((emoji, i) => (
+                            <li key={i}>{emoji}</li>
+                        ))}
+                    </ol>
+                    <p>Copywrite {props.year}</p>
+                </footer>
+            )
+        }
+
+        const dishes = [
+            "Black bean Soup",
+            "Pizza with sauce",
+            "Fish and Fries",
+            "Hamburguer"
+        ];
+
+        const emojis = [
+            "🤔",
+            "🐍",
+            "🫠"
+        ];
+
+        const dishObjects = dishes.map( 
+            (dish, i) => ({
+                id: i,
+                title: dish
+            })
+        );
+
+        function App() {
+            return (
+                <React.Fragment>
+                    <Header name="Prop name something" />
+                    <Main adjective="Amazing yet cheap" dishes={dishObjects} />
+                    <Footer year={new Date().getFullYear()} emojis={emojis}/>
+                </React.Fragment>
+            )
+        }
+
+
+        ReactDOM.render(
+            <App />,
+            document.getElementById("root")
+        );
+    </script>
+</body>
+
+</html>
